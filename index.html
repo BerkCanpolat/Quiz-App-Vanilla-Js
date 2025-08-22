@@ -6,6 +6,8 @@
     <title>Quiz App</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/0d0fffe855.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <button id="getQuestion">Get Questions</button>
@@ -15,32 +17,24 @@
             <div class="quizHeader">
                 <h4 class="mainTitle">Quiz App</h4>
                 <div class="time">
-                    <div class="timeText">Süre Bitti</div>
+                    <div class="timeText">Remaining Time</div>
                     <div class="timeSecond">10</div>
                 </div>
             </div>
-            <div id="body">
-                <div class="cardBody">
-                    <h5 class="questionTitle">Soru burada olacak</h5>
-                    <div class="optionList">
-                        <div class="option"><span>A: Soru 1</span></div>
-                        <div class="option"><span>A: Soru 2</span></div>
-                        <div class="option"><span>A: Soru 3</span></div>
-                        <div class="option"><span>A: Soru 4</span></div>
-                    </div>
-                </div>
-            </div>
+            <div id="body"></div>
             <div class="footer">
-                <div class="questionIndex">1/4</div>
+                <div class="questionIndex"></div>
                 <button class="btnNext">Next</button>
             </div>
         </div>
-        <div class="scoreBox">
-            <p>geçiçi burada ikon olacak</p>
-            <div class="scoreText">4 soruda 3 doğru yaptınız</div>
-            <div>
-                <button>Replay</button>
-                <button>Quit</button>
+        <div id="scoreBoxMain">
+            <div class="scoreBox">
+                <p>geçiçi burada ikon olacak</p>
+                <div class="scoreText">4 soruda 3 doğru yaptınız</div>
+                <div>
+                    <button id="btnReplay" class="btn-replay">Replay</button>
+                    <button id="btnQuit" class="btn-quit">Quit</button>
+                </div>
             </div>
         </div>
     </main>

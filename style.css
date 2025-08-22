@@ -63,6 +63,15 @@
     margin-bottom: .6rem;
     border-radius: .4rem;
     cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.optionList .option:hover {
+    color: #112b2c;
+    background: #FFD33D;
 }
 
 .footer {
@@ -90,8 +99,32 @@
     font-weight: bold;
 }
 
-.scoreBox {
+#scoreBoxMain {
     display: none;
+}
+
+#scoreBoxMain.active {
+    display: block;
+}
+
+.scoreBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.optionList .option.correct {
+    color: #155724;
+    background: #d4edda;
+}
+
+.optionList .option.incorrect {
+    color: #721c24;
+    background: #f8d7da;
+}
+
+.disable {
+    pointer-events: none;
 }
 
 /* 
