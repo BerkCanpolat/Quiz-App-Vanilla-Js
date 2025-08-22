@@ -13,6 +13,7 @@ function UI() {
   this.spaceMain = document.querySelector(".spaceMain");
   this.timeSecond = document.querySelector(".timeSecond");
   this.timeText = document.querySelector(".timeText");
+  this.timeSlider = document.querySelector(".timeSlider");
 }
 
 UI.prototype.showQuestion = function (question) {

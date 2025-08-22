@@ -27,6 +27,8 @@
     justify-content: space-between;
 
     margin-bottom: 1rem;
+
+    position: relative;
 }
 
 .mainTitle {
@@ -131,11 +133,31 @@
     pointer-events: none;
 }
 
-/* 
-#151D3B
-#FFD33D
-#d4edda
-#f8d7da
-#007bff
-#155724
-#f0a500 */
+.timeSlider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: .4rem;
+    border-radius: 1rem;
+    background: #f0a500;
+    margin-bottom: -.7rem;
+}
+
+.btnNext {
+    padding: .5rem;
+    border: none;
+    outline: none;
+    background-color: gray;
+    color: #fff;
+    cursor: pointer;
+
+    opacity: 0;
+    transition: all .5s ease;
+    transform: scale(.5);
+}
+
+.btnNext.showNext {
+
+    opacity: 1;
+    transform: scale(1);
+}
