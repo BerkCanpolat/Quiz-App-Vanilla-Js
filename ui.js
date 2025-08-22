@@ -9,6 +9,8 @@ function UI() {
   this.scoreBoxMain = document.getElementById("scoreBoxMain");
   this.btnQuit = document.getElementById("btnQuit");
   this.btnReplay = document.getElementById("btnReplay");
+  this.startQuestion = document.getElementById("startQuestion");
+  this.spaceMain = document.querySelector(".spaceMain");
 }
 
 UI.prototype.showQuestion = function (question) {

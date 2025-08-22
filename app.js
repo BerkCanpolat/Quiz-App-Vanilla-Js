@@ -24,14 +24,26 @@ const questionList = [
 const quiz = new Quiz(questionList);
 const ui = new UI();
 
+ui.spaceMain.classList.add("noBorder");
+
+ui.startQuestion.addEventListener("click", function() {
+    ui.quizBox.classList.add("active");
+    ui.startQuestion.classList.remove("active");
+    ui.spaceMain.classList.remove("noBorder");
+
+    ui.showQuestion(quiz.getQuestions());
+    ui.showQuestionCount(quiz.questions.length, quiz.questionIndex + 1);
+    
+});
+
 ui.btnNext.addEventListener("click", function () {
   if (quiz.questions.length != quiz.questionIndex) {
     ui.showQuestion(quiz.getQuestions());
     ui.showQuestionCount(quiz.questions.length, quiz.questionIndex + 1);
   } else {
-    console.log("Sorular bitti");
     ui.showScore(quiz.correctAnswerQuestions,quiz.questions.length);
     ui.scoreBoxMain.classList.add("active");
+    ui.quizBox.classList.remove("active");
 }
 });
 
@@ -69,6 +81,7 @@ ui.btnReplay.addEventListener("click", function() {
     quiz.questionIndex = 0;
     quiz.correctAnswerQuestions = 0;
 
-    ui.btnNext.click();
+    ui.startQuestion.click();
     ui.scoreBoxMain.classList.remove("active");
 });
+

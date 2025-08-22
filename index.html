@@ -10,35 +10,41 @@
     <script src="https://kit.fontawesome.com/0d0fffe855.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <button id="getQuestion">Get Questions</button>
-
+    
     <main class="quizMain">
-        <div id="quizBox">
-            <div class="quizHeader">
-                <h4 class="mainTitle">Quiz App</h4>
-                <div class="time">
-                    <div class="timeText">Remaining Time</div>
-                    <div class="timeSecond">10</div>
+        <button id="startQuestion" class="startQuestion active">Start</button>
+        <div class="spaceMain">
+            <div id="quizBox">
+                <div class="quizHeader">
+                    <h4 class="mainTitle">Quiz App</h4>
+                    <div class="time">
+                        <div class="timeText">Remaining Time</div>
+                        <div class="timeSecond">10</div>
+                    </div>
+                </div>
+                <div id="body">
+    
+                </div>
+                <div class="footer">
+                    <div class="questionIndex"></div>
+                    <button class="btnNext">Next</button>
                 </div>
             </div>
-            <div id="body"></div>
-            <div class="footer">
-                <div class="questionIndex"></div>
-                <button class="btnNext">Next</button>
-            </div>
-        </div>
-        <div id="scoreBoxMain">
-            <div class="scoreBox">
-                <p>geçiçi burada ikon olacak</p>
-                <div class="scoreText">4 soruda 3 doğru yaptınız</div>
-                <div>
-                    <button id="btnReplay" class="btn-replay">Replay</button>
-                    <button id="btnQuit" class="btn-quit">Quit</button>
+            <div id="scoreBoxMain">
+                <div class="scoreBox">
+                    <p>geçiçi burada ikon olacak</p>
+                    <div class="scoreText">4 soruda 3 doğru yaptınız</div>
+                    <div>
+                        <button id="btnReplay" class="btn-replay">Replay</button>
+                        <button id="btnQuit" class="btn-quit">Quit</button>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
+
+    <!-- Javascript -->
     <script src="question.js"></script>
     <script src="quiz.js"></script>
     <script src="ui.js"></script>
