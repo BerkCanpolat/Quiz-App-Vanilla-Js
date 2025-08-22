@@ -11,6 +11,8 @@ function UI() {
   this.btnReplay = document.getElementById("btnReplay");
   this.startQuestion = document.getElementById("startQuestion");
   this.spaceMain = document.querySelector(".spaceMain");
+  this.timeSecond = document.querySelector(".timeSecond");
+  this.timeText = document.querySelector(".timeText");
 }
 
 UI.prototype.showQuestion = function (question) {

@@ -23,10 +23,12 @@ const questionList = [
 
 const quiz = new Quiz(questionList);
 const ui = new UI();
+let timerChange;
 
 ui.spaceMain.classList.add("noBorder");
 
 ui.startQuestion.addEventListener("click", function() {
+    startTime(10);
     ui.quizBox.classList.add("active");
     ui.startQuestion.classList.remove("active");
     ui.spaceMain.classList.remove("noBorder");
@@ -38,6 +40,7 @@ ui.startQuestion.addEventListener("click", function() {
 
 ui.btnNext.addEventListener("click", function () {
   if (quiz.questions.length != quiz.questionIndex) {
+    startTime(10);
     ui.showQuestion(quiz.getQuestions());
     ui.showQuestionCount(quiz.questions.length, quiz.questionIndex + 1);
   } else {
@@ -48,6 +51,7 @@ ui.btnNext.addEventListener("click", function () {
 });
 
 function optionSelected(e) {
+    clearInterval(timerChange);
     let selectedElement = e.target;
 
     if(selectedElement.nodeName == "SPAN") {
@@ -85,3 +89,20 @@ ui.btnReplay.addEventListener("click", function() {
     ui.scoreBoxMain.classList.remove("active");
 });
 
+function startTime(time) {
+    timerChange = setInterval(timer, 1000);
+
+    function timer() {
+        console.log(time);
+        ui.timeSecond.textContent = time;
+        time--;
+
+        if(time < 0) {
+            clearInterval(timerChange);
+            ui.timeText.textContent = "Süre Bitti";
+            ui.disableAllOption();
+
+            quiz.questionIndex += 1;
+        }
+    }
+}
