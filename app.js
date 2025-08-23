@@ -94,6 +94,7 @@ ui.btnReplay.addEventListener("click", function() {
 
     ui.startQuestion.click();
     ui.scoreBoxMain.classList.remove("active");
+    ui.btnNext.classList.remove("showNext");
 });
 
 function startTime(time) {
