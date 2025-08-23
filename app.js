@@ -27,16 +27,37 @@ let timerChange;
 let timerSlider;
 
 ui.spaceMain.classList.add("noBorder");
+ui.resultMain.classList.add("noBorder");
+
+function loadNames() {
+    const saved = localStorage.getItem("saveName");
+    quiz.namesArray = saved ? JSON.parse(saved) : [];
+}
 
 ui.startQuestion.addEventListener("click", function() {
-    startTime(10);
-    startTimeSlider();
-    ui.quizBox.classList.add("active");
-    ui.startQuestion.classList.remove("active");
-    ui.spaceMain.classList.remove("noBorder");
+     const myName = ui.mainInput.value.trim();
+     if(myName === "") {
+        alert("Pls something add");
+     } else {
+         quiz.userName = myName;
+         quiz.namesArray.unshift({
+             name: myName,
+             correct: 0
+            });
 
-    ui.showQuestion(quiz.getQuestions());
-    ui.showQuestionCount(quiz.questions.length, quiz.questionIndex + 1);
+            startTime(10);
+            startTimeSlider();
+            ui.quizBox.classList.add("active");
+            ui.startQuestion.classList.remove("active");
+            ui.spaceMain.classList.remove("noBorder");
+            ui.mainInput.classList.remove("active");
+        
+            ui.showQuestion(quiz.getQuestions());
+            ui.showQuestionCount(quiz.questions.length, quiz.questionIndex + 1);
+        
+            savedNames();
+     }
+
     
 });
 
@@ -49,9 +70,22 @@ ui.btnNext.addEventListener("click", function () {
 
     ui.btnNext.classList.remove("showNext");
   } else {
+
+    if(quiz.namesArray.length > 0){
+        const lastPlayerIndex = 0;
+        quiz.namesArray[lastPlayerIndex].correct = quiz.correctAnswerQuestions;
+        savedNames();
+    }
+
+    ui.showName(quiz.namesArray);
+
     ui.showScore(quiz.correctAnswerQuestions,quiz.questions.length);
+
+
     ui.scoreBoxMain.classList.add("active");
     ui.quizBox.classList.remove("active");
+    ui.resultMain.classList.remove("noBorder");
+    ui.resultMain.classList.remove("none");
 }
 });
 
@@ -86,6 +120,7 @@ function optionSelected(e) {
 
 ui.btnQuit.addEventListener("click",function() {
     window.location.reload();
+    ui.formName.classList.add("active");
 });
 
 ui.btnReplay.addEventListener("click", function() {
@@ -95,6 +130,8 @@ ui.btnReplay.addEventListener("click", function() {
     ui.startQuestion.click();
     ui.scoreBoxMain.classList.remove("active");
     ui.btnNext.classList.remove("showNext");
+    ui.resultMain.classList.add("none");
+
 });
 
 function startTime(time) {
@@ -132,3 +169,11 @@ function startTimeSlider() {
         }
     }
 }
+
+function savedNames() {
+    localStorage.setItem("saveName", JSON.stringify(quiz.namesArray));
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    loadNames();
+});

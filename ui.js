@@ -14,6 +14,9 @@ function UI() {
   this.timeSecond = document.querySelector(".timeSecond");
   this.timeText = document.querySelector(".timeText");
   this.timeSlider = document.querySelector(".timeSlider");
+  this.mainInput = document.getElementById("mainInput");
+  this.inputBtn = document.getElementById("inputBtn");
+  this.resultMain = document.querySelector(".resultMain");
 }
 
 UI.prototype.showQuestion = function (question) {
@@ -62,4 +65,11 @@ UI.prototype.showQuestionCount = function(totalQuestions,currentQuestions) {
 UI.prototype.showScore = function(correctAnswer,totalQuestions) {
     const span = `You Answered ${correctAnswer} Questions Correctly out of a total of ${totalQuestions} Questions`;
     document.querySelector(".scoreText").innerHTML = span;
+}
+
+UI.prototype.showName = function(showName) {
+    const namesList = 
+        showName.map((item, index) => `${index + 1}. ${item.name}- ${item.correct || 0} doğru`).join("</br>");
+
+    document.querySelector(".result").innerHTML = namesList;
 }
