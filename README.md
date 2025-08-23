@@ -83,3 +83,19 @@ HTML5
 CSS3
 
 JavaScript (OOP approach)
+
+
+
+
+
+
+https://github.com/user-attachments/assets/db50ffda-c908-4c2d-b992-443122cfe4ce
+
+
+
+
+
+https://github.com/user-attachments/assets/85ce9772-b681-4ddc-9889-e4898ad4ca50
+
+
+
