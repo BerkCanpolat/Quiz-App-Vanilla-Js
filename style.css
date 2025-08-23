@@ -220,3 +220,14 @@
     opacity: 1;
     transform: scale(1);
 }
+
+@media (max-width: 576px) {
+    .spaceMain {
+    width: 90%;
+    padding: 1.2rem;
+}
+
+.timeSlider {
+    display: none;
+}
+}

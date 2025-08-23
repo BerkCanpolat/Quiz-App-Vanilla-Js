@@ -1,22 +1,22 @@
 const questionList = [
   new Question(
-    "Beşiktaş kaç yılında kuruldu?",
-    { a: "1903", b: "1900", c: "1950", d: "1951" },
+    "Which one is a markup language?",
+    { a: "Html", b: "Css", c: "Javascript", d: "React" },
     "a"
   ),
   new Question(
-    "Şenol Güneş Kaç Yaşındadır?",
-    { a: "55", b: "73", c: "31", d: "90" },
+    "Which one is the language of stilling?",
+    { a: "Next.js", b: "Css", c: "Python", d: "C#" },
     "b"
   ),
   new Question(
-    "Süperligde Namağlup Şampiyon Kimdir?",
-    { a: "Beşiktaş", b: "Galatasaray", c: "Fenerbahçe", d: "Trabzonspor" },
+    "What technology is used for the backend?",
+    { a: "Node.js", b: "React.js", c: "Html", d: "Vue.js" },
     "a"
   ),
   new Question(
-    "Bu uygulamayı kim geliştiriyor?",
-    { a: "beni seçme", b: "Cevap d knk", c: "Ben değil", d: "Tabiki ben" },
+    "Did you like the app?",
+    { a: "I can do it better", b: "I don't know", c: "I didn't like it", d: "You're amazing" },
     "d"
   ),
 ];
@@ -107,7 +107,7 @@ function startTime(time) {
 
         if(time < 0) {
             clearInterval(timerChange);
-            ui.timeText.textContent = "Süre Bitti";
+            ui.timeText.textContent = "time's up";
             ui.disableAllOption();
 
             quiz.questionIndex += 1;
@@ -116,7 +116,7 @@ function startTime(time) {
     }
 }
 
-function startTimeSlider(time) {
+function startTimeSlider() {
 
     let widthAdd = 0;
 
