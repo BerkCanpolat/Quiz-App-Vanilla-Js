@@ -1,10 +1,14 @@
 📘 Quiz App
+
 🇹🇷 Türkçe Açıklama
+
 🎯 Proje Hakkında
+
 Bu proje HTML, CSS ve JavaScript kullanılarak geliştirilmiş bir Quiz Uygulamasıdır.
 JavaScript kısmında Nesne Tabanlı Programlama (OOP) yaklaşımı kullanılmıştır.
 
 🔹 Özellikler
+
 👤 Kullanıcıdan isim alınır.
 
 ▶️ "Start" butonuna basınca quiz başlar.
@@ -30,6 +34,7 @@ Daha önceki sonuçlar localStorage ile saklanır ve listelenir.
 🔄 "Replay" ile quiz yeniden başlatılır, ❌ "Quit" ile çıkış yapılır.
 
 🛠️ Kullanılan Teknolojiler
+
 HTML5
 
 CSS3
@@ -37,11 +42,14 @@ CSS3
 JavaScript (OOP yaklaşımı)
 
 🇬🇧 English Description
+
 🎯 About the Project
+
 This project is a Quiz Application built using HTML, CSS, and JavaScript.
 The JavaScript part is developed with an Object-Oriented Programming (OOP) approach.
 
 🔹 Features
+
 👤 Takes the user’s name at the start.
 
 ▶️ Quiz begins when the "Start" button is clicked.
@@ -67,6 +75,7 @@ Previous scores are saved and displayed using localStorage.
 🔄 Replay button restarts the quiz, ❌ Quit button exits the session.
 
 🛠️ Technologies Used
+
 HTML5
 
 CSS3
