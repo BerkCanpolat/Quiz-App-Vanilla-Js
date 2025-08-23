@@ -41,6 +41,8 @@ CSS3
 
 JavaScript (OOP yaklaşımı)
 
+Proje Demo(Netlify); https://berk-quizapp.netlify.app
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 🇬🇧 English Description
@@ -83,6 +85,8 @@ HTML5
 CSS3
 
 JavaScript (OOP approach)
+
+Project Demo(Netlify); https://berk-quizapp.netlify.app
 
 
 
